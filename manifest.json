@@ -1,0 +1,42 @@
+﻿{
+
+  "manifest_version": 2,
+  "name": "Div Grabber",
+  "version": "1.0",
+
+  "description": "Грабим контент",
+
+  "icons": {
+    "32": "icons/border-32.png",
+    "48": "icons/border-48.png"
+  },
+
+  //v1
+  //"content_scripts": [
+  //  {
+  //    "matches": [ "*://*/*" ],
+  //    "js": [ "jszip.js", "FileSaver.js", "grabber.js" ]
+  //  }
+  //],
+
+  //"permissions": [ "storage", "activeTab" ]
+
+  "browser_action": {
+    "default_icon": {
+      "32": "icons/border-32.png",
+      "48": "icons/border-48.png"
+    },
+    "default_title": "Div Grabber",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+      "js": [ "jszip.js", "FileSaver.js", "grabber1cs.js" ]
+    }
+  ],
+
+  "permissions": [ "storage", "tabs", "activeTab" ]
+
+}
